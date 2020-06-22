@@ -1,0 +1,54 @@
+{
+    "name": "ahaneef29/myfirstpackage",
+    "description": "myfirstpackage",
+    "keywords": [
+        "ahaneef29",
+        "myfirstpackage"
+    ],
+    "homepage": "https://github.com/ahaneef29/myfirstpackage",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Haneef Ansari",
+            "email": "haneef5k@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ahaneef29\\Myfirstpackage\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ahaneef29\\Myfirstpackage\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ahaneef29\\Myfirstpackage\\MyfirstpackageServiceProvider"
+            ],
+            "aliases": {
+                "Myfirstpackage": "Ahaneef29\\Myfirstpackage\\MyfirstpackageFacade"
+            }
+        }
+    }
+}
